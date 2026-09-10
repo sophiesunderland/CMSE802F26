@@ -3,7 +3,7 @@
 # - Used by: `make init` and GitHub Actions setup.
 # - Adds: One-file setup for a complete and reproducible starter toolchain.
 # - Learn more: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
-name: scientific-software-template
+name: territorial-inequality
 channels:
   - conda-forge
   - defaults
@@ -22,6 +22,13 @@ dependencies:
   - pdoc  # Optional: build API docs from docstrings
   - ipykernel  # Optional: Python kernel support for notebooks
   - jupyterlab  # Optional: notebook/lab interface
+  - numpy
+  - matplotlib
+  - geopandas
+  - shapely
+  - pyproj
+  - fiona
+  - pathlib
   - pip:
       - detect-secrets  # Optional: secret scanning for commits/CI
 prefix: ./envs

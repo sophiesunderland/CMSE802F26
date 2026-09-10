@@ -32,7 +32,7 @@ If you do not see **Use this template**, ask the instructor or repository owner 
 
 Follow these steps in order. You do not need to read every file in this repository.
 
-1. Choose a project/package name and follow the [rename `mypackage` guide](guides/template-customization.md#rename-mypackage-your-first-customization). For example, `soil_analysis` is a clearer name than the starter name `mypackage`.
+1. Choose a project/package name and follow the [rename `territorial_inequality` guide](guides/template-customization.md#rename-territorial_inequality-your-first-customization). For example, `soil_analysis` is a clearer name than the starter name `territorial_inequality`.
 2. Create the environment if you want to use the provided Conda and Make workflow:
 
    ```bash
@@ -75,9 +75,9 @@ The AI configuration files (`AGENTS.md`, `.cursorrules`, `CLAUDE.md`, `GEMINI.md
 
 ## What to Edit First
 
-1. Follow the [rename `mypackage` guide](guides/template-customization.md#rename-mypackage-your-first-customization) to choose and configure your project package name.
-2. Replace [mypackage/example.py](mypackage/example.py) with your own module(s).
-3. Update tests in [mypackage/tests/test_pytest.py](mypackage/tests/test_pytest.py).
+1. Follow the [rename `territorial_inequality` guide](guides/template-customization.md#rename-territorial_inequality-your-first-customization) to choose and configure your project package name.
+2. Replace [territorial_inequality/example.py](territorial_inequality/example.py) with your own module(s).
+3. Update tests in [territorial_inequality/tests/test_pytest.py](territorial_inequality/tests/test_pytest.py).
 4. Update this README with project goals, install instructions, and examples.
 
 The test file already includes starter templates with short comments for:
@@ -118,7 +118,7 @@ Use the tools you need, when you need them.
 | Tool | What it helps with | How to run here | Files used in this repo | Learn more |
 |---|---|---|---|---|
 | Conda | Creates the software environment so everyone uses the same Python and packages. | `make init` | [environment.yml](environment.yml) | https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html |
-| Pytest | Runs unit tests to check whether your code behavior is correct. | `make test` | [mypackage/tests/test_pytest.py](mypackage/tests/test_pytest.py), [pyproject.toml](pyproject.toml) | https://docs.pytest.org/en/stable/getting-started.html |
+| Pytest | Runs unit tests to check whether your code behavior is correct. | `make test` | [territorial_inequality/tests/test_pytest.py](territorial_inequality/tests/test_pytest.py), [pyproject.toml](pyproject.toml) | https://docs.pytest.org/en/stable/getting-started.html |
 | Black | Rewrites code formatting automatically so style is consistent. | `make format` | [pyproject.toml](pyproject.toml) | https://black.readthedocs.io/en/stable/getting_started.html |
 | Ruff | Finds common bugs/style issues quickly (linting). | `make lint` | [pyproject.toml](pyproject.toml) | https://docs.astral.sh/ruff/tutorial/ |
 | MyPy | Checks type hints for mismatches before runtime errors occur. | `make type` | [pyproject.toml](pyproject.toml) | https://mypy.readthedocs.io/en/stable/getting_started.html |
@@ -143,7 +143,7 @@ make init
 make docs
 ```
 
-Docstring features already demonstrated in [mypackage/example.py](mypackage/example.py):
+Docstring features already demonstrated in [territorial_inequality/example.py](territorial_inequality/example.py):
 
 - `Args`, `Returns`, and `Raises` sections
 - `Examples` that readers can copy/paste

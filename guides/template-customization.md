@@ -16,8 +16,8 @@ Decision labels:
 | environment.yml | Reproducible conda environment setup. | Keep if using conda |
 | makefile | Optional reference workflow with simple common commands for setup, test, lint, and docs. | Optional (or keep if your team uses `make`) |
 | pyproject.toml | Central tool configuration (pytest, black, ruff, mypy). | Keep |
-| mypackage/ | Starter Python package structure. | Modify (rename package and update modules) |
-| mypackage/tests/ | Starter tests and testing patterns. | Modify (replace starter tests with project tests) |
+| territorial_inequality/ | Starter Python package structure. | Modify (rename package and update modules) |
+| territorial_inequality/tests/ | Starter tests and testing patterns. | Modify (replace starter tests with project tests) |
 | 00_START_HERE.ipynb | Guided walkthrough notebook for beginners. | Optional |
 | LICENSE | Legal terms for use and sharing. | Modify (verify owner/year/license choice) |
 
@@ -54,16 +54,16 @@ If your class wants the smallest practical setup, keep these and remove the rest
 - makefile (if your class uses `make`)
 - pyproject.toml
 - LICENSE (modify if needed)
-- mypackage/ (rename and modify)
-- mypackage/tests/ (modify)
+- territorial_inequality/ (rename and modify)
+- territorial_inequality/tests/ (modify)
 - guides/ai-policy.md
 - AGENTS.md
 - .github/copilot-instructions.md (if using Copilot)
 - .github/workflows/ci.yml (if using GitHub)
 
-## Rename `mypackage` (Your First Customization)
+## Rename `territorial_inequality` (Your First Customization)
 
-In Python, a *package* is the folder that holds code you can import into a notebook, script, or test. The template calls this folder `mypackage` only as a placeholder. Choose a short, lowercase name that describes your project, such as `soil_analysis`.
+In Python, a *package* is the folder that holds code you can import into a notebook, script, or test. The template calls this folder `territorial_inequality` only as a placeholder. Choose a short, lowercase name that describes your project, such as `soil_analysis`.
 
 Fast path (recommended):
 
@@ -73,13 +73,13 @@ python scripts/rename_package.py soil_analysis
 
 This helper script renames the package folder and updates common references in configuration, docs, workflow files, and the starter notebook.
 
-For example, if you rename `mypackage` to `soil_analysis`, make these matching changes:
+For example, if you rename `territorial_inequality` to `soil_analysis`, make these matching changes:
 
-1. Rename the folder `mypackage/` to `soil_analysis/`. The `__init__.py` file stays inside that renamed folder; it tells Python to treat the folder as importable code.
+1. Rename the folder `territorial_inequality/` to `soil_analysis/`. The `__init__.py` file stays inside that renamed folder; it tells Python to treat the folder as importable code.
 2. Change imports wherever they occur. For example, change:
 
    ```python
-   from mypackage import power_self
+   from territorial_inequality import power_self
    ```
 
    to:
@@ -89,10 +89,10 @@ For example, if you rename `mypackage` to `soil_analysis`, make these matching c
    ```
 
    In this template, check the test file and `00_START_HERE.ipynb` if you keep the notebook.
-3. In [pyproject.toml](../pyproject.toml), change `testpaths = ["mypackage/tests"]` to `testpaths = ["soil_analysis/tests"]`. This tells pytest where to look for your tests when it is run without a path.
-4. If you use the optional [makefile](../makefile), change `MODULENAME ?= mypackage` to `MODULENAME ?= soil_analysis`. `MODULENAME` is just a variable: it tells commands such as `make test`, `make lint`, and `make docs` which code folder they should use.
-5. If you keep GitHub Pages documentation, change `mypackage` in [.github/workflows/pages.yml](../.github/workflows/pages.yml) to `soil_analysis`. This tells pdoc which package to turn into documentation.
-6. Search the repository for `mypackage` and replace any remaining student-facing examples, such as README text or notebook starter-file checks.
+3. In [pyproject.toml](../pyproject.toml), change `testpaths = ["territorial_inequality/tests"]` to `testpaths = ["soil_analysis/tests"]`. This tells pytest where to look for your tests when it is run without a path.
+4. If you use the optional [makefile](../makefile), change `MODULENAME ?= territorial_inequality` to `MODULENAME ?= soil_analysis`. `MODULENAME` is just a variable: it tells commands such as `make test`, `make lint`, and `make docs` which code folder they should use.
+5. If you keep GitHub Pages documentation, change `territorial_inequality` in [.github/workflows/pages.yml](../.github/workflows/pages.yml) to `soil_analysis`. This tells pdoc which package to turn into documentation.
+6. Search the repository for `territorial_inequality` and replace any remaining student-facing examples, such as README text or notebook starter-file checks.
 
 Why update all of these? If the folder and imports disagree, Python cannot find your code. If a configuration file still uses the old name, a tool may test, format, or document the wrong location.
 
@@ -108,13 +108,13 @@ To keep student workflow simple, this template uses a module-level export list.
 
 Default pattern:
 
-1. Add your new function in `mypackage/example.py` (or your renamed package module).
+1. Add your new function in `territorial_inequality/example.py` (or your renamed package module).
 2. Add the function name to that module's `__all__` list.
 3. Add or update tests.
 
-Because `mypackage/__init__.py` derives package exports from the module `__all__`, students usually do not need to edit `__init__.py` each time they add a function in the same module.
+Because `territorial_inequality/__init__.py` derives package exports from the module `__all__`, students usually do not need to edit `__init__.py` each time they add a function in the same module.
 
 When should students still edit `__init__.py`?
 
-- When introducing a brand new module file (for example `mypackage/stats.py`) and they want top-level imports like `from mypackage import summarize`.
+- When introducing a brand new module file (for example `territorial_inequality/stats.py`) and they want top-level imports like `from territorial_inequality import summarize`.
 - When they intentionally want a narrower public API than the module `__all__`.

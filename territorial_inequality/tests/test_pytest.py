@@ -21,7 +21,7 @@ Additional tutorials:
 
 import pytest
 
-from mypackage import clip_and_scale, power_self
+from territorial_inequality import clip_and_scale, power_self
 
 
 # Pattern 1: import/smoke test
@@ -30,9 +30,9 @@ from mypackage import clip_and_scale, power_self
 # or environment is usually the first thing to check.
 def test_imports() -> None:
     """Sanity-check import path for the package."""
-    import mypackage
+    import territorial_inequality
 
-    assert hasattr(mypackage, "power_self")
+    assert hasattr(territorial_inequality, "power_self")
 
 
 # Pattern 2: fixture

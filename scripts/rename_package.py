@@ -12,7 +12,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OLD_NAME = "mypackage"
+OLD_NAME = "territorial_inequality"
 EXCLUDE_DIRS = {".git", "envs", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
 TEXT_EXTENSIONS = {".py", ".md", ".toml", ".yml", ".yaml", ".ipynb", ".txt", ".ini"}
 
@@ -67,7 +67,7 @@ def main() -> None:
     validate_package_name(new_name)
 
     if new_name == OLD_NAME:
-        print("Package name is already 'mypackage'; no changes made.")
+        print("Package name is already 'territorial_inequality'; no changes made.")
         return
 
     renamed = rename_package_dir(OLD_NAME, new_name)
