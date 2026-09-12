@@ -29,6 +29,8 @@ Computational methods provide the tools to address this gap by analyzing GIS dat
 
 I will develop a reproducible workflow and dataset of constituency-level infrastructure measures across more than 30 countries in Africa. The workflow will automate the processing of spatial data and the calculation of standardized infrastructure measures. The final dataset will provide novel measures of territorial inequality that can be compared both within and across countries.
 
+The project has a large data component. It is designed to process and use data on electoral constituency boundaries and spatial data on infrastructure to create a larger dataset on state presence across Africa. There is a physical component as the constituency and spatial data are based on physical geographic space. Finally, the analytical component involves turning these spatial measurements into measures of state presence. It uses spatial intersections and calculations to create constituency-level measures of different types of infrastructure. 
+
 The dataset is intended to serve as a publicly available resource for academics studying territory in Africa. By making constituency-level spatial measures available, the project will allow scholars to examine how territorial variation is related to political outcomes without having to rely on independent sources of spatial data. By facilitating comparison across countries, the dataset will make research more 
 systematic research beyond individual country studies, where many spatial analyses are currently limited in scope.
 
