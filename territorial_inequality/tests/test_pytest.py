@@ -19,7 +19,6 @@ Additional tutorials:
 - Python testing intro (Real Python): https://realpython.com/python-testing/
 """
 
-import pytest
 
 from territorial_inequality.example_sunderland import transportation_density
 
