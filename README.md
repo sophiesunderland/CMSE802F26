@@ -41,12 +41,21 @@ roads = gpd.read_file(gdb_dat, layer="AFR_Infra_Transport_Road")
 - Merge the measures with the corresponding constituency shapefile.
 - Return the final constituency-level dataset.
 
-Open [Milestone1.ipynb](Milestone1.ipynb) for a guided notebook walkthrough.
+To make calculations for all countries, use the `def density_all` to loop over all countries and calculate density for a specified layer. Similarly, use `def count_all` for constituency-level totals of infrastructure-related facilities and mineral sites. These functions do the following:
+- Standardize coordinate reference systems (CRSs) between GIS layer and country shapefile.
+- Perform spatial joins between infrastructure and constituency boundaries.
+- Calculate constituency-level measures of infrastructure density or infrastructure counts.
+- Add the measures to the corresponding constituency shapefile.
+- Save the updated constituency shapefile.
+
+This process adds all calculated variables to a single shapefile (the original country shapefile) to allow for more straightforward future analysis by keeping all variables together in a single file location.
+
+Open [Milestone1.ipynb](Milestone1.ipynb) and [Milestone2.ipynb](Milestone2.ipynb) for guided notebook walkthroughs.
 
 As the user works along, tests can be run to confirm the code is working as expected. Use the following to confirm whether calculations are behaving as expected:
 
 ```
 make test
-```
 
+```
 
